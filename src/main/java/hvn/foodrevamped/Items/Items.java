@@ -37,9 +37,9 @@ public class Items {
 
     // NEW ITEMS
 
-    public static final Item TEST_ITEM = register(
+    public static final Item STRAWBERRY = register(
             new Item(new Item.Properties().food(REGEN_FOOD)),
-            "test_item"
+            "strawberry"
     );
 
 
@@ -55,7 +55,7 @@ public class Items {
 
     public static void initialize() {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((itemGroup) -> itemGroup.accept(Items.TEST_ITEM));
+                .register((itemGroup) -> itemGroup.accept(Items.STRAWBERRY));
     }
 }
 
