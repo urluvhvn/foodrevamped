@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "foodrevamped",
+	"version": "${version}",
+	"name": "FoodRevamped",
+	"description": "Food and hunger system reimagined",
+	"authors": [
+		"hvn"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/foodrevamped/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"hvn.foodrevamped.FoodRevamped"
+		],
+		"client": [
+			"hvn.foodrevamped.client.FoodRevampedClient"
+		]
+	},
+	"mixins": [
+		"foodrevamped.mixins.json",
+		{
+			"config": "foodrevamped.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.1",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
