@@ -2,8 +2,8 @@
 	"required": true,
 	"package": "hvn.foodrevamped.client.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleClientMixin"
+	"client": [
+		"GuiMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

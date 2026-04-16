@@ -1,4 +1,4 @@
-package hvn.foodrevamped.client.mixin;
+package hvn.foodrevamped.client;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.entity.player.Player;
@@ -6,16 +6,15 @@ import net.minecraft.client.Minecraft;
 
 /**
  * HungerBarRenderer - Renders a custom hunger bar on the HUD
- * Uses HudRenderCallback from Fabric API (1.21.1+)
  */
-public class HungerBarMixin {
+public class HungerBarRenderer {
 	
 	private static final Minecraft minecraft = Minecraft.getInstance();
 	
 	/**
-	 * Renders the custom hunger bar - called from FoodRevampedClient
+	 * Renders the custom hunger bar - called from HudRenderCallback
 	 */
-	public static void renderHungerBar(GuiGraphics guiGraphics, float partialTick) {
+	public static void renderHungerBar(GuiGraphics guiGraphics) {
 		// Get the player
 		Player player = minecraft.player;
 		if (player == null) {
@@ -31,9 +30,9 @@ public class HungerBarMixin {
 		int screenWidth = minecraft.getWindow().getGuiScaledWidth();
 		int screenHeight = minecraft.getWindow().getGuiScaledHeight();
 		
-		// Position for custom hunger bar (adjust to your preference)
-		int x = screenWidth / 2 - 91 + 81; // Right side of hotbar
-		int y = screenHeight - 39;
+		// Position for custom hunger bar (perfectly aligned on top of vanilla bar)
+		int x = screenWidth / 2 - 91; // Left side of hunger bar (same as vanilla)
+		int y = screenHeight - 	60; // Y position of hunger bar
 		
 		// Render custom hunger bar
 		renderCustomHungerBar(guiGraphics, x, y, foodLevel, saturation);
@@ -47,7 +46,7 @@ public class HungerBarMixin {
 	 * @param foodLevel Current food level (0-20)
 	 * @param saturation Saturation level
 	 */
-	private void renderCustomHungerBar(GuiGraphics guiGraphics, int x, int y, int foodLevel, float saturation) {
+	private static void renderCustomHungerBar(GuiGraphics guiGraphics, int x, int y, int foodLevel, float saturation) {
 		// Render background bar (grey)
 		guiGraphics.fill(x, y, x + 81, y + 9, 0xFF808080);
 		
@@ -77,7 +76,7 @@ public class HungerBarMixin {
 	 * @param foodLevel Current food level (0-20)
 	 * @return Color as ARGB integer
 	 */
-	private int getHungerBarColor(int foodLevel) {
+	private static int getHungerBarColor(int foodLevel) {
 		if (foodLevel >= 15) {
 			return 0xFF00FF00; // Green - Well fed
 		} else if (foodLevel >= 10) {
