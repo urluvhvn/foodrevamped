@@ -2,7 +2,7 @@
 	"required": true,
 	"package": "hvn.foodrevamped.client.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"client": [
+	"mixins": [
 		"ExampleClientMixin"
 	],
 	"injectors": {

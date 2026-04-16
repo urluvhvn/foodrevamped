@@ -31,7 +31,7 @@ public class Items {
 
             // SECOND VALUE
             // Effect Multiplier: e.g. Regen II, in this case being 1
-            .effect(new MobEffectInstance(MobEffects.REGENERATION, 2 * 20, 1), 1.0f)
+            .effect(new MobEffectInstance(MobEffects.REGENERATION, 4 * 20, 1), 1.0f)
             .build();
 
 
