@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "foodrevamped",
+	"id": "nutritionplus",
 	"version": "${version}",
-	"name": "FoodRevamped",
-	"description": "Food and hunger system reimagined",
+	"name": "NutritionPlus",
+	"description": "Minecraft's nutrition system REIMAGINED",
 	"authors": [
 		"hvn"
 	],
@@ -12,20 +12,20 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/foodrevamped/icon.png",
+	"icon": "assets/nutritionplus/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"hvn.foodrevamped.FoodRevamped"
+			"hvn.nutritionplus.NutritionPlus"
 		],
 		"client": [
-			"hvn.foodrevamped.client.FoodRevampedClient"
+			"hvn.nutritionplus.client.NutritionPlusClient"
 		]
 	},
 	"mixins": [
-		"foodrevamped.mixins.json",
+		"nutritionplus.mixins.json",
 		{
-			"config": "foodrevamped.client.mixins.json",
+			"config": "nutritionplus.client.mixins.json",
 			"environment": "client"
 		}
 	],

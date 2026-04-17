@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "hvn.foodrevamped.mixin",
+	"package": "hvn.nutritionplus.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin"

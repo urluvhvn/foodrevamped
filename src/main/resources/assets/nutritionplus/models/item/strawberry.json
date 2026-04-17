@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodrevamped:item/strawberry"
+    "layer0": "nutritionplus:item/strawberry"
   }
 }

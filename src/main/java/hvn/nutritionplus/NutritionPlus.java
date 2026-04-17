@@ -1,13 +1,13 @@
-package hvn.foodrevamped;
+package hvn.nutritionplus;
 
-import hvn.foodrevamped.Items.Items;
+import hvn.nutritionplus.Items.Items;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class FoodRevamped implements ModInitializer {
-	public static final String MOD_ID = "foodrevamped";
+public class NutritionPlus implements ModInitializer {
+	public static final String MOD_ID = "nutritionplus";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -22,6 +22,6 @@ public class FoodRevamped implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("FoodRevamped Mod LOADED!");
+		LOGGER.info("NutritionPlus Mod LOADED!");
 	}
 }

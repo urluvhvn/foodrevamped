@@ -18,7 +18,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"foodrevamped" {
+		"nutritionplus" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

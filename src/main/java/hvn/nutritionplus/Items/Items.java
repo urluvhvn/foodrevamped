@@ -1,6 +1,6 @@
-package hvn.foodrevamped.Items;
+package hvn.nutritionplus.Items;
 
-import hvn.foodrevamped.FoodRevamped;
+import hvn.nutritionplus.NutritionPlus;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -48,7 +48,7 @@ public class Items {
     // REGISTER NEW ITEMS
 
     public static Item register(Item item, String id) {
-        ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(FoodRevamped.MOD_ID, id);
+        ResourceLocation itemID = ResourceLocation.fromNamespaceAndPath(NutritionPlus.MOD_ID, id);
 
         return Registry.register(BuiltInRegistries.ITEM, itemID, item);
     }

@@ -1,4 +1,4 @@
-package hvn.foodrevamped.client;
+package hvn.nutritionplus.client;
 
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.entity.player.Player;

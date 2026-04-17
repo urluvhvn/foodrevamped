@@ -1,13 +1,13 @@
-package hvn.foodrevamped.client;
+package hvn.nutritionplus.client;
 
+import hvn.nutritionplus.NutritionPlus;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import hvn.foodrevamped.FoodRevamped;
 
-public class FoodRevampedClient implements ClientModInitializer {
+public class NutritionPlusClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		FoodRevamped.LOGGER.info("Initializing FoodRevamped Client...");
+		NutritionPlus.LOGGER.info("Initializing NutritionPlus Client...");
 		
 		try {
 			// Register HUD render callback for custom hunger bar
@@ -15,9 +15,9 @@ public class FoodRevampedClient implements ClientModInitializer {
 				HungerBarRenderer.renderHungerBar(guiGraphics);
 			});
 			
-			FoodRevamped.LOGGER.info("FoodRevamped Client LOADED!");
+			NutritionPlus.LOGGER.info("NutritionPlus Client LOADED!");
 		} catch (Exception e) {
-			FoodRevamped.LOGGER.error("Failed to initialize FoodRevamped Client", e);
+			NutritionPlus.LOGGER.error("Failed to initialize NutritionPlus Client", e);
 			throw new RuntimeException(e);
 		}
 	}

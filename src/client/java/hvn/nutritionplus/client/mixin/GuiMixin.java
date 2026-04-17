@@ -1,4 +1,4 @@
-package hvn.foodrevamped.client.mixin;
+package hvn.nutritionplus.client.mixin;
 
 import net.minecraft.client.gui.Gui;
 import org.spongepowered.asm.mixin.Mixin;
